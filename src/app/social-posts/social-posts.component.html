@@ -1,0 +1,8 @@
+<button>New Thought</button>
+<!-- <div class="popup"> -->
+<!-- couldn't quite figure out -->
+<app-post-form (added)="addPost($event)"></app-post-form>
+<!-- </div> -->
+<ul class="post-list">
+    <app-post *ngFor="let post of posts, index as i" [postRef]="post" (deleted)="deletePost(i)"></app-post>
+</ul>
